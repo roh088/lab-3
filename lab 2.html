@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sahid Afridhi - Portfolio</title>
+    <style>
+        /* Reset & base */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            color: #222;
+            line-height: 1.5;
+            background: #f5f6f7
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none
+        }
+
+        /* Header */
+        header {
+            background: #0b59b7;
+            color: #fff;
+            padding: 18px 0;
+            text-align: center;
+            box-shadow: 0 2px 0 rgba(0, 0, 0, .06)
+        }
+
+        header h1 {
+            font-size: 22px;
+            margin-bottom: 6px
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 18px;
+            justify-content: center;
+            font-size: 14px
+        }
+
+        nav a {
+            opacity: .95
+        }
+
+        /* Container */
+        .container {
+            max-width: 980px;
+            margin: 28px auto;
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            padding: 30px
+        }
+
+        /* About */
+        .about {
+            text-align: center;
+            padding: 20px 10px;
+            border-bottom: 1px solid #e6e6e6
+        }
+
+        .profile-photo {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 10px solid #e9eef6;
+            background: #fff;
+            display: inline-block
+        }
+
+        .intro {
+            margin-top: 14px;
+            color: #555;
+            font-size: 15px
+        }
+
+        /* Skills table */
+        .skills {
+            padding: 26px 10px;
+            border-bottom: 1px solid #e6e6e6
+        }
+
+        .skills h2 {
+            text-align: center;
+            margin-bottom: 14px
+        }
+
+        table.skills-table {
+            width: 60%;
+            margin: 0 auto;
+            border-collapse: collapse
+        }
+
+        table.skills-table th,
+        table.skills-table td {
+            border: 1px solid #0b59b7;
+            padding: 10px;
+            text-align: center
+        }
+
+        table.skills-table th {
+            background: #0b59b7;
+            color: #fff
+        }
+
+        /* Projects */
+        .projects {
+            padding: 30px 10px;
+            border-bottom: 1px solid #e6e6e6
+        }
+
+        .projects h2 {
+            text-align: center;
+            margin-bottom: 18px
+        }
+
+        .project-card {
+            width: 80%;
+            margin: 10px auto;
+            padding: 18px;
+            background: #fff;
+            border: 1px solid #e6e6e6;
+            border-radius: 6px;
+            box-shadow: 0 1px 0 rgba(0, 0, 0, .03);
+            text-align: center
+        }
+
+        .project-card p {
+            color: #666;
+            margin-top: 6px
+        }
+
+        /* Contact */
+        .contact {
+            padding: 28px 10px
+        }
+
+        .contact h2 {
+            text-align: center;
+            margin-bottom: 12px
+        }
+
+        form.contact-form {
+            width: 70%;
+            margin: 0 auto;
+            border: 2px solid #0b59b7;
+            padding: 12px;
+            background: #fff
+        }
+
+        .form-row {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 10px
+        }
+
+        .form-row label {
+            width: 100px;
+            font-weight: 600;
+            padding-top: 6px
+        }
+
+        .form-row input[type="text"],
+        .form-row input[type="email"],
+        .form-row textarea {
+            flex: 1;
+            padding: 8px;
+            border: 1px solid #bfcbdc
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px
+        }
+
+        .submit-row {
+            text-align: center;
+            margin-top: 10px
+        }
+
+        button.send {
+            background: #0b59b7;
+            color: #fff;
+            padding: 10px 28px;
+            border: 0;
+            border-radius: 4px;
+            cursor: pointer
+        }
+
+        /* Footer & back-to-top */
+        footer {
+            height: 8px;
+            background: #0b59b7;
+            margin-top: 20px
+        }
+
+        .back-to-top {
+            position: fixed;
+            right: 22px;
+            bottom: 22px;
+            background: #0b59b7;
+            color: #fff;
+            padding: 10px 12px;
+            border-radius: 6px;
+            font-size: 14px
+        }
+
+        /* Responsive */
+        @media(max-width:700px) {
+            table.skills-table {
+                width: 100%
+            }
+
+            .profile-photo {
+                width: 160px;
+                height: 160px
+            }
+
+            .container {
+                margin: 14px
+            }
+
+            form.contact-form {
+                width: 92%
+            }
+
+            .form-row {
+                flex-direction: column
+            }
+
+            .form-row label {
+                width: 100%;
+                padding-bottom: 6px
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <a id="top"></a>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section id="about" class="about">
+            <!-- profile photo (use the uploaded image) -->
+            <img class="profile-photo" src="WhatsApp Image 2025-11-09 at 20.30.32_edd13bcd.jpg" alt="Sahid Afridhi">
+            <h2 style="margin-top:12px">About Me</h2>
+            <p class="intro">Hello! My name is <strong>Sahid Afridhi</strong>. I am learning web development and this is
+                my first portfolio website. I enjoy building small projects to practice and learn.</p>
+        </section>
+
+        <section id="skills" class="skills">
+            <h2>My Skills</h2>
+            <table class="skills-table">
+                <thead>
+                    <tr>
+                        <th>Skill</th>
+                        <th>Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HTML</td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Learning</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="projects" class="projects">
+            <h2>My Projects</h2>
+            <div class="project-card">
+                <h3>Project 1</h3>
+                <p>A simple HTML & CSS webpage.</p>
+            </div>
+            <div class="project-card">
+                <h3>Project 2</h3>
+                <p>Another awesome mini project.</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact Me</h2>
+            <form class="contact-form" action="#" method="post">
+                <div class="form-row">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name">
+                </div>
+
+                <div class="form-row">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                </div>
+
+                <div class="form-row">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" placeholder="Write your message"></textarea>
+                </div>
+
+                <div class="submit-row">
+                    <button class="send" type="submit">Send</button>
+                </div>
+            </form>
+        </section>
+
+    </main>
+
+    <a class="back-to-top" href="#top">Back to Top</a>
+    <footer></footer>
+
+</body>
+
+</html>
